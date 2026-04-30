@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 20% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 210 18% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 210 18% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 174 72% 46%;
+    --primary-foreground: 210 20% 8%;
+
+    --secondary: 210 15% 18%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 210 12% 16%;
+    --muted-foreground: 210 12% 55%;
+
+    --accent: 174 60% 40%;
+    --accent-foreground: 210 20% 95%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 38 92% 10%;
+
+    --success: 142 60% 45%;
+    --success-foreground: 142 60% 10%;
+
+    --border: 210 12% 20%;
+    --input: 210 12% 20%;
+    --ring: 174 72% 46%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 210 18% 10%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 174 72% 46%;
+    --sidebar-primary-foreground: 210 20% 8%;
+    --sidebar-accent: 210 15% 16%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 210 12% 18%;
+    --sidebar-ring: 174 72% 46%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(174 72% 46%), hsl(190 80% 50%));
+    --gradient-alert: linear-gradient(135deg, hsl(0 72% 55%), hsl(25 90% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(210 18% 14%), hsl(210 18% 10%));
+    --shadow-glow: 0 0 30px -5px hsl(174 72% 46% / 0.3);
+    --shadow-alert: 0 0 40px -5px hsl(0 72% 55% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-xl;
+  }
+
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-alert {
+    box-shadow: var(--shadow-alert);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-alert {
+    background: var(--gradient-alert);
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes pulse-alert {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
