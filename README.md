@@ -1,7 +1,5 @@
 # Welcome to my your project
 
-TODO: Document your project here
-
 # Sign Language Translator
 A real-time Sign Language Translator that uses a webcam to detect hand gestures and convert them into text and speech.
 
