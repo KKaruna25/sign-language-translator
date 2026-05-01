@@ -1,5 +1,5 @@
-# Welcome to my your project
-git 
+# Welcome to my project
+
 # Sign Language Translator
 A real-time Sign Language Translator that uses a webcam to detect hand gestures and convert them into text and speech.
 
@@ -42,6 +42,7 @@ It enables two-way communication between speech users and sign language users.
 
 This unique feature detects a predefined "help" gesture and triggers an alert.
 It can be used in emergency situations where verbal communication is not possible, making the system more impactful and practical.
+
 
 ## Author
 Karuna
